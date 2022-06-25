@@ -1,0 +1,81 @@
+{% include 'layouts/header.html.twig' %}
+{% block title %}Role{% endblock %}
+<!-- SQUALL -->
+
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                            <div class="page-header">
+
+
+                                <h2 class="pageheader-title " align="center"><u>Liste des roles</u></h2>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+
+
+
+
+                    <!-- ############################################################################################## -->
+
+
+                    <!-- recent orders  -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <a href="{{ path('app_role_new') }}" class="btn btn-primary"><i class="fas fa-user-plus"></i>
+                            Ajouter un Role</a>
+                        <div class="card">
+
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class="bg-light">
+                                            <tr class="border-0">
+                                                <th>ID</th>
+                                                <th>Nom</th>
+                                                <th>Détails</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            
+                                            {% for role in roles %}
+                                            <tr>
+                                                <td> {{ role.id }} </td>
+                                                <td> {{ role.nom }} </td>
+                                                <td>
+                                                    <a href="{{ path('app_role_edit', {'id': role.id}) }}"
+                                                        class="btn btn-sm btn-warning text-white ml-2"><i
+                                                        class="fa fa-edit"></i>Modifier</a>
+                                                     <a href="{{ path('app_role_delete', {'id': role.id}) }}" class="btn btn-sm btn-danger text-white ml-2"><i
+                                                            class="fa fa-trash"></i>Supprimer</a> 
+                                                </td>
+                                               
+
+                                            </tr>
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end recent orders  -->
+
+                    <!-- /SQUALL -->
+
+{% include 'layouts/footer.html.twig' %}
+

@@ -1,6 +1,15 @@
 # crud_symfony
 
+![output1](/readme/output1.png)
+
+
 Have to make a crud symfony app for school; some mockup too
+
+![output1](/readme/output2.png)
+
+![output1](/readme/output3.png)
+
+![output1](/readme/output4.png)
 
 ### Prerequisites
 

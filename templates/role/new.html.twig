@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Role{% endblock %}
+
+{% block body %}
+<!-- ============================================================== -->
+<!-- pageheader  -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        
+        <div class="page-header">
+           
+               
+            <h2 class="pageheader-title " align="center">Créer un role </h2>
+            
+
+        
+            
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader  -->
+<!-- ============================================================== -->
+
+    {{ include('role/_form.html.twig') }}
+
+    <a href="{{ path('app_role_index') }}">Revenir à la liste</a>
+{% endblock %}
